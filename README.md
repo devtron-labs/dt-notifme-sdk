@@ -10,9 +10,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/notifme-sdk"><img alt="npm-status" src="https://img.shields.io/npm/v/notifme-sdk.svg?style=flat" /></a>
-  <a href="https://travis-ci.org/notifme/notifme-sdk"><img alt="travis-build-status" src="https://api.travis-ci.org/notifme/notifme-sdk.svg" /></a>
   <a href="https://codeclimate.com/github/notifme/notifme-sdk/test_coverage"><img src="https://api.codeclimate.com/v1/badges/2d2cc6d915094ddb50b7/test_coverage" /></a>
-  <a href="https://david-dm.org/notifme/notifme-sdk"><img alt="dependencies" src="https://david-dm.org/notifme/notifme-sdk.svg" /></a>
   <a href="https://github.com/notifme/notifme-sdk/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT_License-blue.svg?style=flat" /></a>
   <a href="https://slackin-notifme.now.sh"><img alt="slack" src="https://img.shields.io/badge/Slack-Join_us!-e01563.svg?style=flat" /></a>
 </p>
@@ -482,6 +480,24 @@ new NotifmeSdk({
 ```
 
 </p></details>
+
+<details><summary>Seven</summary><p>
+
+```javascript
+new NotifmeSdk({
+  channels: {
+    sms: {
+      providers: [{
+        type: 'seven',
+        apiKey: 'xxxxx'
+      }]
+    }
+  }
+})
+```
+
+</p></details>
+
 <details><summary>Custom <i>(define your own)</i></summary><p>
 
 ```javascript
@@ -1134,6 +1150,8 @@ $ yarn install
 ```
 
 Before making a [pull request](https://help.github.com/articles/creating-a-pull-request/), check that the code passes all the unit tests, respects the [Standard JS rules](https://standardjs.com/), and the [Flow type checker](https://flow.org/).
+
+Tests will also run automatically with GitHub Actions when you open a PR.
 
 ```shell
 $ yarn run test
